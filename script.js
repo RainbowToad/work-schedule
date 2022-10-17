@@ -1,2 +1,4 @@
 var dayEl = $('#currentDay');
-dayEl.text(moment().format("dddd MMMM YYYY"));
+dayEl.text(moment().format("dddd MMMM Do, YYYY"));
+
+
