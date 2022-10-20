@@ -2,13 +2,22 @@
 $(document).ready(function() {
     //set local storage on button click
     $(".btn").click(function() {
-        console.log(this);
         var text = $(this).siblings(".description").val(); 
         var time = $(this).parent().attr("id"); 
 
         //set items in local storage.
         localStorage.setItem(time, text);
     })
+    //load saved date to appropriate hour
+    $('.description').each(function() {
+       console.log(this);
+
+       $(this).val(localStorage.getItem("hour4"))
+    });
+
+   
+
+    
 
 
 // Set current date to jumbotron area
@@ -16,7 +25,7 @@ $(document).ready(function() {
     dayEl.text(moment().format("dddd MMMM Do, YYYY"));
 
 //Make previous times=grey, present=red, future=green
-    var currentTime = moment().calendar();
+    var currentTime = moment().hour();
     console.log(currentTime);
 
 
@@ -27,7 +36,7 @@ $(document).ready(function() {
 
 
 
-//save to local storage
+
 
 //refresh has events persist
 
