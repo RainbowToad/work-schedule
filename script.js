@@ -35,23 +35,4 @@ $(document).ready(function() {
         }
         hourTime++
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//refresh has events persist
-
-
-
 });
